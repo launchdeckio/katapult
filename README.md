@@ -23,7 +23,7 @@ When performing a deployment, katapult will recursively search the root director
 Allows the specification of one or more commands that are run before any of the `build` commands are run. `install` commands are run by traversing the build tree, *starting* at the root directory.
 If any of the commands exits with a code other than `0`, the deployment is cancelled.
 
-> After execution of the `install` commands in any directory, the build tree is rescanned - `install` commands may therefore produce subfolders containing `.katapult.yml` files.
+> After execution of the `install` commands in any directory, the build tree is rescanned - `install` commands may thus produce subfolders in turn containing `.katapult.yml` files which will be processed in a same way.
 
 #### `build`
 
@@ -44,17 +44,10 @@ or using a more verbose (associative) syntax. The latter allows you to define ad
 ```
 Katapult will use [johnnycache](https://github.com/jmversteeg/johnnycache) and store the resulting files of the operation (in this case the entire contents of `node_modules` after running `npm install`) to a `.tar.gz` archive in `.katapult/cache`.
 
-#### `purge (launchdeck.io only)`
+#### `purge`
 
 Allows the specification of one or more globs that will be used to delete unnecessary files; a *blacklist*, if you will. This allows you to, for example, remove the `node_modules` bloat after bundling a script with browserify.
 It is also possible to define a "negating glob array" -- meaning all globs start with `!`. Katapult will treat such an array as a *whitelist* and remove all other files in the directory.
-
-#### `shared (launchdeck.io only)`
-(root-only)
-
-Allows the specification of files and directories that should persist throughout multiple deploys. Most notably, this is useful for configuration files such as `.env` and file-based databases or user upload directories.
-
-Directories can be denoted with a trailing `/`.
 
 #### Example .katapult.yml
 
