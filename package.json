@@ -1,6 +1,6 @@
 {
   "name": "katapult",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Powerful non-destructive build and deployment automation",
   "main": "bin/katapult.js",
   "bin": {
