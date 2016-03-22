@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+'use strict';
+
+const cli = require('helmsman')();
+
+require('update-notifier')({pkg: require('./../package.json')}).notify();
+
+// help <sub-command>     Show the --help for a specific command
+// This does not apply
+delete cli.availableCommands.help;
+
+cli.parse(process.argv);

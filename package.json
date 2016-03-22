@@ -1,0 +1,72 @@
+{
+  "name": "katapult",
+  "version": "0.0.1",
+  "description": "Powerful non-destructive build and deployment automation",
+  "main": "bin/katapult.js",
+  "bin": {
+    "katapult": "bin/katapult",
+    "katapult-build": "bin/katapult-build.js",
+    "katapult-clear-cache": "bin/katapult-clear-cache.js",
+    "katapult-install": "bin/katapult-install.js"
+  },
+  "command_root": "bin",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "pretest": "jshint lib",
+    "test": "mocha --recursive -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/katapult/katapult.git"
+  },
+  "keywords": [
+    "build",
+    "deployment",
+    "automation",
+    "tool"
+  ],
+  "author": "JM Versteeg",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/launchdeckio/katapult",
+  "bugs": {
+    "url": "https://github.com/launchdeckio/katapult/issues"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "chalk": "^1.1.1",
+    "del": "^2.2.0",
+    "inquirer": "^0.12.0",
+    "is-glob-blacklist": "0.0.1",
+    "johnnycache": "^0.9.0",
+    "js-yaml": "^3.5.5",
+    "lodash": "^4.6.1",
+    "helmsman": "^1.0.3",
+    "minimatch": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "mock-fs": "^3.8.0",
+    "node-notifier": "^4.5.0",
+    "pretty-error": "^2.0.0",
+    "q-io": "^1.13.2",
+    "slug": "^0.9.1",
+    "sprintf-js": "^1.0.3",
+    "stream-buffers": "^3.0.0",
+    "update-notifier": "^0.6.3",
+    "worq": "^2.1.2",
+    "yargs": "^4.3.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "coveralls": "^2.11.8",
+    "eslint": "^2.4.0",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "preferGlobal": true
+}
