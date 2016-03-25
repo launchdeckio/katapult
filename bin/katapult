@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 'use strict';
 
-const cli = require('helmsman')();
+const _ = require('lodash');
 
-require('update-notifier')({pkg: require('./../package.json')}).notify();
+let yargs = require('yargs').usage('$0 <cmd> [args]');
 
-// help <sub-command>     Show the --help for a specific command
-// This does not apply
-delete cli.availableCommands.help;
+_.each(require('./../lib/cli/actions'), Action => (new Action()).register(yargs));
 
-cli.parse(process.argv);
+yargs = yargs
+    .help('h')
+    .alias('h', 'help')
+    .argv;

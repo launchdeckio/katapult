@@ -2,12 +2,9 @@
   "name": "katapult",
   "version": "1.0.0",
   "description": "Build automation tool by launchdeck.io",
-  "main": "bin/katapult.js",
+  "main": "bin/katapult",
   "bin": {
-    "katapult": "bin/katapult",
-    "katapult-build": "bin/katapult-build.js",
-    "katapult-clear-cache": "bin/katapult-clear-cache.js",
-    "katapult-install": "bin/katapult-install.js"
+    "katapult": "bin/katapult"
   },
   "command_root": "bin",
   "engines": {
