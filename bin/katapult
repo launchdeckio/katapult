@@ -10,4 +10,6 @@ _.each(require('./../lib/cli/actions'), Action => (new Action()).register(yargs)
 yargs = yargs
     .help('h')
     .alias('h', 'help')
+    .version()
+    .alias('v', 'version')
     .argv;
