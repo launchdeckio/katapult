@@ -33,6 +33,7 @@
   "dependencies": {
     "bluebird": "^3.3.4",
     "chalk": "^1.1.1",
+    "defa": "0.0.1",
     "del": "^2.2.0",
     "helmsman": "^1.0.3",
     "inquirer": "^0.12.0",
