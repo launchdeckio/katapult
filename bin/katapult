@@ -11,5 +11,4 @@ yargs = yargs
     .help('h')
     .alias('h', 'help')
     .version()
-    .alias('v', 'version')
     .argv;
