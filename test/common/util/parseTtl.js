@@ -19,8 +19,10 @@ describe('parseTtl', () => {
         parseTtl('100 s').should.equal(100000);
 
         parseTtl('1h').should.equal(60 * 60 * 1000);
+        parseTtl('1 hour').should.equal(60 * 60 * 1000);
 
         parseTtl('1d').should.equal(24 * 60 * 60 * 1000);
+        parseTtl('1 day').should.equal(24 * 60 * 60 * 1000);
 
         expect(parseTtl('foobar')).to.be.null;
         expect(parseTtl()).to.be.null;
