@@ -1,5 +1,12 @@
 # katapult
-**Build automation tool by launchdeck.io**
+
+> Build automation tool by launchdeck.io**
+
+[![Build Status][travis-image]][travis-url]
+[![Build Status (Windows)][appveyor-image]][appveyor-url]
+[![Code Quality][codeclimate-image]][codeclimate-url]
+[![Code Coverage][coveralls-image]][coveralls-url]
+[![NPM Version][npm-image]][npm-url]
 
 ### Install
 
@@ -11,7 +18,7 @@ $ npm install -g katapult
 
 **Performs the install procedure in place, as if the working directory was a katapult build.**
 
-The install procedure is normally performed in a temporary folder to get a build ready for deployment. This command can be used to quickly prepare a repository for local development.
+This command can be used to quickly prepare a repository for local development.
 
 ### .katapult.yml
 
@@ -42,7 +49,7 @@ or using a more verbose (associative) syntax. The latter allows you to define ad
     input: package.json
     output: node_modules
 ```
-Katapult will use [johnnycache](https://github.com/jmversteeg/johnnycache) and store the resulting files of the operation (in this case the entire contents of `node_modules` after running `npm install`) to a `.tar.gz` archive in `.katapult/cache`.
+Katapult will use [johnnycache](https://github.com/launchdeckio/katapult) and store the resulting files of the operation (in this case the entire contents of `node_modules` after running `npm install`) to a `.tar.gz` archive in `.katapult/cache`.
 
 #### `purge`
 
@@ -71,3 +78,31 @@ purge:
 ### .katapultignore
 
 Directories that match any of the globs specified in a .katapultignore file will not be traversed in the process of scanning for .katapult.yml files.
+
+## License
+
+GNU AGPL v3 © [JM Versteeg](http://github.com/jmversteeg)
+
+[![dependency Status][david-image]][david-url]
+[![devDependency Status][david-dev-image]][david-dev-url]
+
+[travis-image]: https://img.shields.io/travis/launchdeckio/katapult.svg?style=flat-square
+[travis-url]: https://travis-ci.org/launchdeckio/katapult
+
+[appveyor-image]: https://img.shields.io/appveyor/ci/launchdeckio/katapult.svg?style=flat-square&label=build+(Windows)
+[appveyor-url]: https://ci.appveyor.com/project/launchdeckio/katapult
+
+[codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/katapult.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/launchdeckio/katapult
+
+[david-image]: https://img.shields.io/david/launchdeckio/katapult.svg?style=flat-square
+[david-url]: https://david-dm.org/launchdeckio/katapult
+
+[david-dev-image]: https://img.shields.io/david/dev/launchdeckio/katapult.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/launchdeckio/katapult#info=devDependencies
+
+[coveralls-image]: https://img.shields.io/coveralls/launchdeckio/katapult.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/launchdeckio/katapult
+
+[npm-image]: https://img.shields.io/npm/v/johnnycache.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/johnnycache

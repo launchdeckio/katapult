@@ -36,7 +36,6 @@
     "chalk": "^1.1.1",
     "defa": "0.1.0",
     "del": "^2.2.0",
-    "helmsman": "^1.0.3",
     "human-interval": "^0.1.5",
     "inquirer": "^0.12.0",
     "is-glob-blacklist": "0.0.1",
