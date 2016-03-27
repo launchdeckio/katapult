@@ -2,35 +2,34 @@
 
 require('./support/support');
 
-var rewire      = require('rewire'),
-    path        = require('path'),
-    BuildTree   = rewire('./../lib/BuildTree'),
-    MockFs      = require('q-io/fs-mock'),
-    classicMock = require('mock-fs');
+const rewire      = require('rewire');
+const path        = require('path');
+const BuildTree   = rewire('./../lib/BuildTree');
+const MockFs      = require('q-io/fs-mock');
+const classicMock = require('mock-fs');
+const constants   = require('./../constants.json');
 
-var constants = require('./../constants.json');
+const configFile = constants.configFile;
+const ignoreFile = constants.ignorefile;
 
-var configFile = constants.configFile,
-    ignoreFile = constants.ignorefile;
-
-var setupMockFs = function (mockFs) {
+const setupMockFs = function (mockFs) {
     BuildTree.__set__('fs', MockFs(mockFs));
     classicMock(mockFs);
 };
 
-var teardownMockFs = function () {
+const teardownMockFs = function () {
     classicMock.restore();
 };
 
-var expected = [
+const expected = [
     path.join('tmp', 'a', configFile),
     path.join('tmp', 'a', 'b', configFile),
     path.join('tmp', 'a', 'b', 'c', configFile)
 ];
 
-describe('BuildTree', function () {
+describe('BuildTree', () => {
 
-    describe('getConfigFiles()', function () {
+    describe('getConfigFiles()', () => {
 
         it('should get an array of the config files present in the given directory', function () {
             setupMockFs(require('./resources/filesystems/testIgnores'));
@@ -45,7 +44,10 @@ describe('BuildTree', function () {
         afterEach(function () {
             teardownMockFs();
         });
-
     });
 
+    describe('scanTree()', () => {
+
+        // it('should ')
+    });
 });
