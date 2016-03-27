@@ -1,6 +1,6 @@
 # katapult
 
-> Build automation tool by launchdeck.io**
+> Build automation tool by launchdeck.io
 
 [![Build Status][travis-image]][travis-url]
 [![Code Quality][codeclimate-image]][codeclimate-url]
