@@ -3,7 +3,6 @@
 > Build automation tool by launchdeck.io**
 
 [![Build Status][travis-image]][travis-url]
-[![Build Status (Windows)][appveyor-image]][appveyor-url]
 [![Code Quality][codeclimate-image]][codeclimate-url]
 [![Code Coverage][coveralls-image]][coveralls-url]
 [![NPM Version][npm-image]][npm-url]
@@ -88,9 +87,6 @@ GNU AGPL v3 © [JM Versteeg](http://github.com/jmversteeg)
 
 [travis-image]: https://img.shields.io/travis/launchdeckio/katapult.svg?style=flat-square
 [travis-url]: https://travis-ci.org/launchdeckio/katapult
-
-[appveyor-image]: https://img.shields.io/appveyor/ci/launchdeckio/katapult.svg?style=flat-square&label=build+(Windows)
-[appveyor-url]: https://ci.appveyor.com/project/launchdeckio/katapult
 
 [codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/katapult.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/launchdeckio/katapult
