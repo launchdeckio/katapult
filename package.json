@@ -4,7 +4,7 @@
   "description": "Build automation tool by launchdeck.io",
   "main": "bin/katapult",
   "bin": {
-    "katapult": "bin/katapult"
+    "katapult": "bin/katapult.js"
   },
   "command_root": "bin",
   "engines": {
@@ -12,6 +12,7 @@
   },
   "scripts": {
     "pretest": "jshint lib",
+    "depcheck": "depcheck --ignore-bin-package=false",
     "test": "mocha --recursive -R spec"
   },
   "repository": {
