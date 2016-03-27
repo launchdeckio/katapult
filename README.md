@@ -100,5 +100,5 @@ GNU AGPL v3 © [JM Versteeg](http://github.com/jmversteeg)
 [coveralls-image]: https://img.shields.io/coveralls/launchdeckio/katapult.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/launchdeckio/katapult
 
-[npm-image]: https://img.shields.io/npm/v/johnnycache.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/johnnycache
+[npm-image]: https://img.shields.io/npm/v/katapult.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/katapult
