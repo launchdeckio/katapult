@@ -4,7 +4,7 @@
 const _ = require('lodash');
 
 const updateNotifier = require('update-notifier');
-const pkg            = require('./package.json');
+const pkg            = require('./../package.json');
 
 updateNotifier({pkg}).notify();
 
