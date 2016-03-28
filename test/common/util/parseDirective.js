@@ -11,6 +11,14 @@ const CacheableDirective = require('./../../../lib/common/commands/CacheableDire
 
 describe('parseDirective', () => {
 
+    it('should throw an error for invalid inputs', () => {
+
+        (() => parseDirective(null)).should.throw(TypeError);
+        (() => parseDirective(true)).should.throw(TypeError);
+        (() => parseDirective({})).should.throw(TypeError);
+        (() => parseDirective({'foo': 'bar'})).should.throw(TypeError);
+    });
+
     it('should parse "simple" directives into an instance of Directive', () => {
 
         _.forEach(['npm i', {cmd: 'npm i'}], obj => {
