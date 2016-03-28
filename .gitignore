@@ -3,4 +3,6 @@ npm-debug.log
 npm-debug.log.*
 .idea/
 .katapult
+coverage
 workspace
+/isolate-*
