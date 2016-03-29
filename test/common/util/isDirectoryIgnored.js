@@ -6,7 +6,7 @@ const isDirectoryIgnored = require('./../../../lib/common/util/isDirectoryIgnore
 
 const fga = require('./../../../lib/common/util/globUtils').flattenGlobArray;
 
-const idi = (directory, ignores, globalIgnores) => isDirectoryIgnored(directory, ignores ? fga(ignores) : [], globalIgnores);
+const idi = (directory, ignores, globalIgnores) => isDirectoryIgnored(directory, ignores ? fga(ignores) : undefined, globalIgnores);
 
 describe('isDirectoryIgnored', () => {
 
