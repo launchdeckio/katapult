@@ -40,9 +40,10 @@ describe('parseDirective', () => {
 
         directive.should.be.an.instanceof(CacheableDirective);
         directive.command.should.eql('npm i');
-        directive.input.should.deep.eql(['package.json']);
-        directive.output.should.deep.eql(['node_modules']);
-        directive.ttl.should.eql(24 * 60 * 60 * 1000);
+        directive.cacheOptions.should.be.an('object');
+        directive.cacheOptions.input.should.deep.eql(['package.json']);
+        directive.cacheOptions.output.should.deep.eql(['node_modules']);
+        directive.cacheOptions.ttl.should.eql(24 * 60 * 60 * 1000);
     });
 
     it('should allow arrays for input and output', () => {
@@ -54,8 +55,8 @@ describe('parseDirective', () => {
             'ttl':    '1 day'
         });
 
-        directive.input.should.deep.eql(['assets/js', 'assets/css']);
-        directive.output.should.deep.eql(['build/js', 'build/css']);
+        directive.cacheOptions.input.should.deep.eql(['assets/js', 'assets/css']);
+        directive.cacheOptions.output.should.deep.eql(['build/js', 'build/css']);
     });
 
     it('should allow cacheable directives without an input argument', () => {
@@ -66,6 +67,6 @@ describe('parseDirective', () => {
             'ttl':    '1 day'
         });
 
-        expect(directive.input).to.be.undefined;
+        expect(directive.cacheOptions.input).to.be.undefined;
     });
 });
