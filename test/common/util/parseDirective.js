@@ -25,7 +25,7 @@ describe('parseDirective', () => {
 
             const directive = parseDirective(obj);
             directive.should.be.an.instanceof(Directive);
-            directive.string.should.eql('npm i');
+            directive.command.should.eql('npm i');
         });
     });
 
@@ -39,7 +39,7 @@ describe('parseDirective', () => {
         });
 
         directive.should.be.an.instanceof(CacheableDirective);
-        directive.string.should.eql('npm i');
+        directive.command.should.eql('npm i');
         directive.input.should.deep.eql(['package.json']);
         directive.output.should.deep.eql(['node_modules']);
         directive.ttl.should.eql(24 * 60 * 60 * 1000);
