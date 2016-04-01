@@ -15,9 +15,9 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
-  # run tests
+  # Runner tests
   - npm test
-  # run test deployment
+  # Runner test deployment
 #  - katapult deploy jmversteeg/katapult-test#ci local
 
 # Don't actually build.
