@@ -7,7 +7,7 @@ node_js:
   - 'stable'
 before_script:
   - npm install -g istanbul
-  - npm Runner-script pretest
+  - npm run-script pretest
   - npm link
 script:
   - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive
