@@ -37,6 +37,7 @@
     "chalk": "^1.1.3",
     "defa": "0.1.0",
     "del": "^2.2.0",
+    "filesize": "^3.2.1",
     "human-interval": "^0.1.5",
     "inquirer": "^0.12.0",
     "is-glob-blacklist": "0.0.1",
