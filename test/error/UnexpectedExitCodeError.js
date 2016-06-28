@@ -3,13 +3,13 @@
 require('./../support/support');
 
 const UnexpectedExitCodeError = require('./../../lib/error/UnexpectedExitCodeError');
-const ControlledError         = require('./../../lib/error/ControlledError');
+const GracefulError           = require('shipment').GracefulError;
 
 describe('UnexpectedExitCodeError', () => {
 
-    it('should be a subclass of ControlledError', () => {
+    it('should be a subclass of GracefulError', () => {
 
-        (new UnexpectedExitCodeError()).should.be.an.instanceof(ControlledError);
+        (new UnexpectedExitCodeError()).should.be.an.instanceof(GracefulError);
     });
 
     it('should carry the exitcode', () => {

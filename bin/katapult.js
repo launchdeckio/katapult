@@ -1,20 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
-const _ = require('lodash');
+const cli     = require('shipment').cli;
+const pkg     = require('./../package.json');
+const actions = require('./../lib/actions');
 
-const updateNotifier = require('update-notifier');
-const pkg            = require('./../package.json');
-
-updateNotifier({pkg}).notify();
-
-let yargs = require('yargs').usage('$0 <cmd> [args]');
-
-_.each(require('./../lib/cli/actions'), Action => (new Action()).register(yargs));
-
-yargs = yargs
-    .help('h')
-    .version()
-    .alias('h', 'help')
-    .alias('v', 'version')
-    .argv;
+cli(actions, pkg);

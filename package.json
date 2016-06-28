@@ -6,7 +6,6 @@
   "bin": {
     "katapult": "bin/katapult.js"
   },
-  "command_root": "bin",
   "engines": {
     "node": ">=4"
   },
@@ -18,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/katapult/katapult.git"
+    "url": "git://github.com/launchdeckio/katapult.git"
   },
   "keywords": [
     "build",
@@ -33,28 +32,30 @@
     "url": "https://github.com/launchdeckio/katapult/issues"
   },
   "dependencies": {
-    "bluebird": "^3.4.0",
+    "bluebird": "^3.4.1",
     "chalk": "^1.1.3",
     "defa": "0.1.0",
-    "del": "^2.2.0",
+    "del": "^2.2.1",
     "filesize": "^3.3.0",
     "human-interval": "^0.1.6",
-    "inquirer": "^1.0.3",
+    "inquirer": "^1.1.0",
     "is-glob-blacklist": "0.0.1",
     "johnnycache": "^1.3.1",
     "js-yaml": "^3.6.1",
     "lodash": "^4.13.1",
-    "minimatch": "^3.0.0",
+    "minimatch": "^3.0.2",
     "mkdirp": "^0.5.1",
     "mock-fs": "^3.9.0",
     "node-notifier": "^4.6.0",
     "numeral": "^1.5.3",
     "pretty-error": "^2.0.0",
     "q-io": "^1.13.2",
+    "shipment": "0.2.1",
     "slug": "^0.9.1",
     "sprintf-js": "^1.0.3",
+    "sqlite3": "^3.1.4",
     "stream-buffers": "^3.0.0",
-    "update-notifier": "^0.7.0",
+    "update-notifier": "^1.0.2",
     "worq": "^2.1.2",
     "yargs": "^4.7.1"
   },
@@ -62,8 +63,8 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "coveralls": "^2.11.9",
-    "eslint": "^2.12.0",
-    "istanbul": "^0.4.3",
+    "eslint": "^2.13.1",
+    "istanbul": "^0.4.4",
     "jshint": "^2.9.2",
     "mocha": "^2.5.3",
     "opn-cli": "^3.1.0",
