@@ -3,7 +3,7 @@
 var constants = require('./../../../constants.json');
 
 var configFile = constants.configFile,
-    ignoreFile = constants.ignorefile;
+    ignoreFile = constants.ignoreFile;
 
 var mockFs = {
     'tmp': {

@@ -1,7 +1,8 @@
 {
   "currentName": "current",
   "configFile": ".katapult.yml",
-  "ignorefile": ".katapultignore",
+  "ignoreFile": ".katapultignore",
+  "globalIgnoreFile": ".katapultignore_global",
   "workspace": ".katapult",
   "setupFile": "setup.json",
   "cacheFolder": "cache"

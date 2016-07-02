@@ -10,7 +10,7 @@ const classicMock = require('mock-fs');
 const constants   = require('./../constants.json');
 
 const configFile = constants.configFile;
-const ignoreFile = constants.ignorefile;
+const ignoreFile = constants.ignoreFile;
 
 const setupMockFs = function (mockFs) {
     BuildTree.__set__('fs', MockFs(mockFs));
