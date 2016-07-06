@@ -38,7 +38,6 @@
     "del": "^2.2.1",
     "filesize": "^3.3.0",
     "human-interval": "^0.1.6",
-    "inquirer": "^1.1.0",
     "is-glob-blacklist": "0.0.1",
     "johnnycache": "^1.4.2",
     "js-yaml": "^3.6.1",
@@ -48,17 +47,13 @@
     "mock-fs": "^3.9.0",
     "node-notifier": "^4.6.0",
     "numeral": "^1.5.3",
-    "pretty-error": "^2.0.0",
     "q-io": "^1.13.2",
     "shipment": "0.3.0",
     "slug": "^0.9.1",
     "sprintf-js": "^1.0.3",
-    "sqlite3": "^3.1.4",
     "stream-buffers": "^3.0.0",
-    "update-notifier": "^1.0.2",
     "user-home": "^2.0.0",
-    "worq": "^2.1.2",
-    "yargs": "^4.7.1"
+    "worq": "^2.1.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
