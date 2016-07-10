@@ -17,6 +17,20 @@ $ npm install -g katapult
 
 ```bash
 $ katapult --help
+
+Commands:
+  install      Recursively runs the "install" directives starting at the current
+               working directory.
+  build        Recursively runs the "build" directives starting at the current
+               working directory.
+  purge        Wipes files not needed in the build based on the the "purge"
+               globs.
+  clear-cache  Clears the build cache in the configured workspace
+  label-build  Generates a .build.json file at the current working directory.
+
+Options:
+  -h, --help  Show help                                                [boolean]
+  --version   Show version number                                      [boolean]
 ```
 
 ### .katapult.yml
