@@ -13,11 +13,11 @@
 $ npm install -g katapult
 ```
 
-### $ katapult install
+### Usage
 
-**Performs the install procedure in place, as if the working directory was a katapult build.**
-
-This command can be used to quickly prepare a repository for local development.
+```bash
+$ katapult --help
+```
 
 ### .katapult.yml
 
