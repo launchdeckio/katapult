@@ -62,6 +62,7 @@
     "chai-as-promised": "^5.3.0",
     "coveralls": "^2.11.9",
     "eslint": "^3.0.0",
+    "execa": "^0.4.0",
     "istanbul": "^0.4.4",
     "jshint": "^2.9.2",
     "mocha": "^2.5.3",
