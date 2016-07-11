@@ -4,5 +4,6 @@
   "globalIgnoreFile": ".katapultignore_global",
   "workspace": ".katapult",
   "cacheFolder": "cache",
-  "buildInfoFile": ".build.json"
+  "buildInfoFile": ".build-info.json",
+  "sumFile": ".build-sum.json"
 }
