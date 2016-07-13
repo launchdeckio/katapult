@@ -18,6 +18,8 @@ $ npm install -g katapult
 ```bash
 $ katapult --help
 
+katapult <cmd> [args]
+
 Commands:
   install      Recursively runs the "install" directives starting at the current
                working directory.
@@ -25,8 +27,11 @@ Commands:
                working directory.
   purge        Wipes files not needed in the build based on the the "purge"
                globs.
-  clear-cache  Clears the build cache in the configured workspace
-  label-build  Generates a .build.json file at the current working directory.
+  clear-cache  Clears the build cache in the configured workspace.
+  write-info   Generates a .build-info.json file at the current working
+               directory.
+  write-sum    Generates a .build-sum.json file at the current working
+               directory.
 
 Options:
   -h, --help  Show help                                                [boolean]
