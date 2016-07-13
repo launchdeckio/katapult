@@ -41,7 +41,7 @@
     "git-describe": "^3.0.1",
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
-    "johnnycache": "^1.4.2",
+    "johnnycache": "^1.5.0",
     "js-yaml": "^3.6.1",
     "lodash": "^4.13.1",
     "minimatch": "^3.0.2",
