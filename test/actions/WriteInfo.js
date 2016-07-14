@@ -34,7 +34,6 @@ describe('write-info', () => {
         return (new WriteInfo()).executeCommand({}).then(() => {
             return fs.read(path.join(mockWorkspace.getTmp(), constants.buildInfoFile)).then(data => {
                 let result = JSON.parse(data);
-                result.should.have.property('name', 'katapult-test-tmp');
                 result.should.have.property('hash');
                 result.should.have.property('tag');
             });
