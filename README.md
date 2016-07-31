@@ -43,7 +43,7 @@ Options:
 ### .katapult.yml
 
 You can automate installation, testing and build routines through the use of .katapult.yml files.
-When performing a deployment, katapult will recursively search the root directory for `.katapult.yml` files and run the directives they contain.
+When packaging a build, katapult will recursively search the root directory for `.katapult.yml` files and run the directives they contain.
 
 #### `install`
 
