@@ -21,17 +21,19 @@ $ katapult --help
 katapult <cmd> [args]
 
 Commands:
-  install      Recursively runs the "install" directives starting at the current
+  package      Package the build at the current working directory. (Invokes
+               run-install, run-build, write-info, purge, and write-sum)
+  run-install  Recursively runs the "install" directives starting at the current
                working directory.
-  build        Recursively runs the "build" directives starting at the current
+  run-build    Recursively runs the "build" directives starting at the current
                working directory.
-  purge        Wipes files not needed in the build based on the the "purge"
-               globs.
-  clear-cache  Clears the build cache in the configured workspace.
   write-info   Generates a .build-info.json file at the current working
                directory.
+  purge        Wipes files not needed in the build based on the the "purge"
+               globs.
   write-sum    Generates a .build-sum.json file at the current working
                directory.
+  clear-cache  Clears the build cache in the configured workspace.
 
 Options:
   -h, --help  Show help                                                [boolean]
@@ -41,7 +43,7 @@ Options:
 ### .katapult.yml
 
 You can automate installation, testing and build routines through the use of .katapult.yml files.
-When performing a deployment, katapult will recursively search the root directory for `.katapult.yml` files and run the directives they contain.
+When packaging a build, katapult will recursively search the root directory for `.katapult.yml` files and run the directives they contain.
 
 #### `install`
 
@@ -61,7 +63,7 @@ Commands can be specified using two different types of syntax: plain and simple
 ```yaml
   - npm install
 ```
-or using a more verbose (associative) syntax. The latter allows you to define additional options on a per-command basis. For now, these options are limited to enabling caching of commands to improve build speed.
+or using a more verbose (associative) syntax. The latter allows you to define additional options on a per-command basis, for example: command caching. Command caching tremendously increases build speeds.
 ```yaml
   - cmd: npm install
     input: package.json
@@ -82,11 +84,6 @@ install:
     input: composer.lock
     output: vendor
 
-shared:
-  - .env
-  - web/.htaccess
-  - web/app/uploads/
-
 purge:
   - "!config"
   - "!vendor"
@@ -95,7 +92,12 @@ purge:
 
 ### .katapultignore
 
-Directories that match any of the globs specified in a .katapultignore file will not be traversed in the process of scanning for .katapult.yml files.
+Directories that match any of the globs specified in a .katapultignore file will not be traversed in the process of scanning for .katapult.yml files. You can also configure globs globally by creating `~/.katapultignore_global`:
+
+```
+**/node_modules
+**/vendor
+```
 
 ## License
 
