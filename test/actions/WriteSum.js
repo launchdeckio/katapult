@@ -31,7 +31,7 @@ describe('write-sum', () => {
 
         process.chdir(mockWorkspace.getTmp());
 
-        return (new WriteSum()).executeCommand({}).then(() => {
+        return (new WriteSum()).executeCommand({'clean-metafiles': true}).then(() => {
             return fs.read(path.join(mockWorkspace.getTmp(), constants.sumFile)).should.eventually.not.be.empty;
         });
     }).timeout(5000);
