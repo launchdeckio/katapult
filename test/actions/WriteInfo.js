@@ -38,5 +38,5 @@ describe('write-info', () => {
                 result.should.have.property('tag');
             });
         });
-    }).timeout(5000);
+    }).timeout(10000);
 });
