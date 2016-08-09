@@ -5,5 +5,7 @@
   "workspace": ".katapult",
   "cacheFolder": "cache",
   "buildInfoFile": ".build-info.json",
-  "sumFile": ".build-sum.json"
+  "buildInfoFileRand": ".build-info-%s.json",
+  "sumFile": ".build-sum.json",
+  "sumFileRand": ".build-sum-%s.json"
 }
