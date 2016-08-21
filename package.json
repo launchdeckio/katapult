@@ -42,7 +42,7 @@
     "globby": "^6.0.0",
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
-    "johnnycache": "^2.0.1",
+    "johnnycache": "^2.0.2",
     "js-yaml": "^3.6.1",
     "lodash": "^4.15.0",
     "make-globs-absolute": "^1.0.0",
