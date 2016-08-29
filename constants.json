@@ -1,0 +1,10 @@
+{
+  "configFile": ".katapult.yml",
+  "ignoreFile": ".katapultignore",
+  "globalIgnoreFile": ".katapultignore_global",
+  "workspace": ".katapult",
+  "buildInfoFile": ".build-info.json",
+  "buildInfoFileRand": ".build-info-%s.json",
+  "sumFile": ".build-sum.json",
+  "sumFileRand": ".build-sum-%s.json"
+}
