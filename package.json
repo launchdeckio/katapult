@@ -8,7 +8,7 @@
     "katapult": "bin/katapult.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "pretest": "jshint lib",
