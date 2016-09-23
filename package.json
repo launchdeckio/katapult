@@ -50,7 +50,7 @@
     "pify": "^2.3.0",
     "q-io": "^1.13.2",
     "randomstring": "^1.1.5",
-    "shipment": "4.0.0",
+    "shipment": "7.0.0",
     "slug": "^0.9.1",
     "sprintf-js": "^1.0.3",
     "stream-buffers": "^3.0.1",
