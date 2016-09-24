@@ -31,7 +31,7 @@ describe('write-info', () => {
 
         process.chdir(mockWorkspace.getTmp());
 
-        return (new WriteInfo()).executeCli({'clean-metafiles': true}).then(() => {
+        return (new WriteInfo()).executeCli({'predictable-metafiles': true}).then(() => {
             return fs.read(path.join(mockWorkspace.getTmp(), constants.buildInfoFile)).then(data => {
                 let result = JSON.parse(data);
                 result.should.have.property('hash');
