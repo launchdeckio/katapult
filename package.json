@@ -3,7 +3,6 @@
   "version": "0.45.1",
   "description": "Build automation tool by launchdeck.io",
   "main": "index.js",
-  "private": true,
   "bin": {
     "katapult": "bin/katapult.js"
   },
