@@ -101,7 +101,7 @@ Directories that match any of the globs specified in a .katapultignore file will
 
 ## License
 
-GNU AGPL v3 © [JM Versteeg](http://github.com/jmversteeg)
+GNU AGPL v3 © [sgtlambda](http://github.com/sgtlambda)
 
 [![dependency Status][david-image]][david-url]
 [![devDependency Status][david-dev-image]][david-dev-url]
