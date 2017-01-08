@@ -2,9 +2,9 @@
 
 require('./../support/support');
 
-const WriteInfo     = require('./../../lib/actions/WriteInfo');
-const MockWorkspace = require('./../support/MockWorkspace');
-const constants     = require('./../../constants.json');
+const WriteInfo        = require('./../../lib/actions/WriteInfo');
+const useMockWorkspace = require('./../support/useMockWorkspace');
+const constants        = require('./../../constants.json');
 
 const sprintf = require('sprintf-js').sprintf;
 const path    = require('path');
@@ -12,27 +12,16 @@ const fs      = require('q-io/fs');
 
 describe('write-info', () => {
 
-    let mockWorkspace;
+    let getMockWorkspace = useMockWorkspace(before, after);
 
-    before(() => {
-
-        mockWorkspace = new MockWorkspace(__dirname);
-        return mockWorkspace.setup();
-    });
-
-    after(() => {
-
-        return mockWorkspace.tearDown();
-    });
-
-    beforeEach(() => mockWorkspace.copy());
+    beforeEach(() => getMockWorkspace().copy());
 
     it(sprintf('should write some data to %s', constants.buildInfoFile), () => {
 
-        process.chdir(mockWorkspace.getTmp());
+        process.chdir(getMockWorkspace().getTmp());
 
         return (new WriteInfo()).executeCli({'predictable-metafiles': true}).then(() => {
-            return fs.read(path.join(mockWorkspace.getTmp(), constants.buildInfoFile)).then(data => {
+            return fs.read(path.join(getMockWorkspace().getTmp(), constants.buildInfoFile)).then(data => {
                 let result = JSON.parse(data);
                 result.should.have.property('hash');
                 result.should.have.property('tag');
