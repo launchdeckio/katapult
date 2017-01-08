@@ -32,12 +32,12 @@ describe('BuildTree', () => {
     describe('getConfigFiles()', () => {
 
         it('should get an array of the config files present in the given directory', function () {
-            setupMockFs(require('./resources/filesystems/testIgnores'));
+            setupMockFs(require('./fixtures/filesystems/testIgnores'));
             return BuildTree.getConfigFiles('tmp').should.eventually.deep.equal(expected);
         });
 
         it('should work with a .katapultignore blacklist', function () {
-            setupMockFs(require('./resources/filesystems/testIgnoreBlacklist'));
+            setupMockFs(require('./fixtures/filesystems/testIgnoreBlacklist'));
             return BuildTree.getConfigFiles('tmp').should.eventually.deep.equal(expected);
         });
 
