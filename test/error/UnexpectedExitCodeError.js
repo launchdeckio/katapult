@@ -14,7 +14,7 @@ describe('UnexpectedExitCodeError', () => {
 
     it('should carry the exitcode', () => {
 
-        const error = new UnexpectedExitCodeError(1);
+        const error = new UnexpectedExitCodeError({exitCode: 1});
         error.exitCode.should.be.a('number').and.be.equal(1);
     });
 });
