@@ -1,6 +1,6 @@
 {
   "name": "katapult",
-  "version": "0.46.1",
+  "version": "0.47.0",
   "description": "Build automation tool by launchdeck.io",
   "main": "index.js",
   "bin": {
