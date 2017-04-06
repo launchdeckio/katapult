@@ -2,19 +2,19 @@
 
 require('./../support/support');
 
-const UnexpectedExitCodeError = require('./../../lib/error/UnexpectedExitCodeError');
-const GracefulError           = require('shipment').GracefulError;
+const ProcessFailedError = require('./../../lib/error/ProcessFailedError');
+const GracefulError      = require('shipment').GracefulError;
 
-describe('UnexpectedExitCodeError', () => {
+describe('ProcessFailedError', () => {
 
     it('should be a subclass of GracefulError', () => {
 
-        (new UnexpectedExitCodeError()).should.be.an.instanceof(GracefulError);
+        (new ProcessFailedError()).should.be.an.instanceof(GracefulError);
     });
 
     it('should carry the exitcode', () => {
 
-        const error = new UnexpectedExitCodeError({exitCode: 1});
-        error.exitCode.should.be.a('number').and.be.equal(1);
+        const error = new ProcessFailedError({code: 1});
+        error.code.should.be.a('number').and.be.equal(1);
     });
 });
