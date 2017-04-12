@@ -1587,9 +1587,9 @@ jodid25519@^1.0.0:
   dependencies:
     jsbn "~0.1.0"
 
-johnnycache@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/johnnycache/-/johnnycache-2.3.3.tgz#c6c273538af1c3b6b6ef804ae8dcf187112ceaef"
+johnnycache@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/johnnycache/-/johnnycache-2.4.0.tgz#e92ec20e108d67b32411883b2f454d313a59ab54"
   dependencies:
     bluebird "^3.5.0"
     defa "^1.0.0"
