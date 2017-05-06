@@ -33,7 +33,7 @@
     "defa": "1.0.0",
     "del": "^2.2.2",
     "dirsum": "^0.1.1",
-    "filesize": "^3.5.6",
+    "filesize": "^3.5.9",
     "git-describe": "^4.0.1",
     "globby": "^6.1.0",
     "human-interval": "^0.1.6",
@@ -44,12 +44,12 @@
     "make-globs-absolute": "^1.0.0",
     "minimatch": "^3.0.3",
     "mkdirp": "^0.5.1",
-    "mock-fs": "^4.2.0",
+    "mock-fs": "^4.3.0",
     "numeral": "^2.0.6",
     "pify": "^2.3.0",
-    "q-io": "^1.13.2",
+    "q-io": "^1.13.4",
     "randomstring": "^1.1.5",
-    "shipment": "^9.0.1",
+    "shipment": "^10.0.0",
     "shipment-monitor-process": "^2.2.2",
     "slug": "^0.9.1",
     "sprintf-js": "^1.0.3",
@@ -60,7 +60,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
-    "coveralls": "^2.13.0",
+    "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "execa": "^0.6.3",
     "istanbul": "^0.4.5",
@@ -68,8 +68,8 @@
     "mocha": "^3.3.0",
     "opn-cli": "^3.1.0",
     "rewire": "^2.5.2",
-    "sinon": "^2.1.0",
-    "sinon-chai": "^2.9.0"
+    "sinon": "^2.2.0",
+    "sinon-chai": "^2.10.0"
   },
   "preferGlobal": true
 }
