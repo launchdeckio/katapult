@@ -11,16 +11,20 @@ const fs   = require('q-io/fs');
 
 describe('write-info', () => {
 
-    let getMockWorkspace = useMockWorkspace(before, after);
+    let mockWorkspace = useMockWorkspace();
 
-    beforeEach(() => getMockWorkspace().copy());
+    before(mockWorkspace.before);
+
+    after(mockWorkspace.after);
+
+    beforeEach(() => mockWorkspace.get().copy());
 
     it(`should write some data to ${constants.buildInfoFile}`, () => {
 
-        process.chdir(getMockWorkspace().getTmp());
+        process.chdir(mockWorkspace.get().getTmp());
 
         return (new WriteInfo()).executeCli({'predictable-metafiles': true}).then(() => {
-            return fs.read(path.join(getMockWorkspace().getTmp(), constants.buildInfoFile)).then(data => {
+            return fs.read(path.join(mockWorkspace.get().getTmp(), constants.buildInfoFile)).then(data => {
                 let result = JSON.parse(data);
                 result.should.have.property('hash');
                 result.should.have.property('tag');

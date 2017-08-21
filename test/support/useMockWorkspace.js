@@ -2,22 +2,26 @@
 
 const MockWorkspace = require('./MockWorkspace');
 
-module.exports = (before, after) => {
+const path = require('path');
+
+module.exports = () => {
 
     let mockWorkspace;
 
-    before(function () {
+    return {
+        before: function () {
 
-        this.timeout(10000);
-        mockWorkspace = new MockWorkspace(__dirname);
-        return mockWorkspace.setup();
-    });
+            this.timeout(10000);
+            mockWorkspace = new MockWorkspace(path.resolve(__dirname + '/../test-tmp'));
+            console.log('run setup');
+            return mockWorkspace.setup();
+        },
+        after:  function () {
 
-    after(function () {
-
-        this.timeout(10000);
-        return mockWorkspace.tearDown();
-    });
-
-    return () => mockWorkspace;
+            this.timeout(10000);
+            console.log('run teardown');
+            return mockWorkspace.tearDown();
+        },
+        get:    () => mockWorkspace,
+    };
 };

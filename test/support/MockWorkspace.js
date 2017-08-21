@@ -1,23 +1,32 @@
 'use strict';
 
 const pify   = require('pify');
-const mkdirp = pify(require('mkdirp'));
+const mkdirp = require('make-dir');
 const path   = require('path');
 const execa  = require('execa');
 
 class MockWorkspace {
 
     constructor(cwd) {
-        this.workspace = '.' + (new Date()).getTime();
-        this.root      = path.join(cwd, this.workspace);
+        this.root = path.join(cwd, '.' + (new Date()).getTime());
     }
 
-    run(cmd) {
-        return mkdirp(this.root).then(() => execa.shell(cmd, {
+    /**
+     * Run given command in the mock workspace
+     * @param cmd
+     * @returns {Promise.<void>}
+     */
+    async run(cmd) {
+        await mkdirp(this.root);
+        return execa.shell(cmd, {
             cwd: this.root
-        }))
+        });
     }
 
+    /**
+     * (before hook)
+     * @returns {*}
+     */
     setup() {
         return this.run('git clone https://github.com/jmversteeg/katapult-test.git');
     }
@@ -26,12 +35,20 @@ class MockWorkspace {
         return this.run('rm -rf katapult-test-tmp && cp -R katapult-test katapult-test-tmp');
     }
 
+    /**
+     * Get the path to the "tmp" destination directory
+     */
     getTmp() {
         return path.join(this.root, 'katapult-test-tmp');
     }
 
-    tearDown() {
-        return this.run('rm -rf ../' + this.workspace);
+    /**
+     * (after hook)
+     * @returns {*}
+     */
+    async tearDown() {
+        await this.run(`rm -rf ${this.root}`);
+        process.chdir(__dirname);
     }
 }
 
