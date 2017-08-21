@@ -71,7 +71,6 @@ describe('ScannedBuildTree', () => {
         });
 
         it('should run the commands in the right order', async () => {
-            // process.chdir(simulatedRoot);
             const ctx = new Context();
             await (new ScannedBuildTree(simulatedRoot)).install(ctx);
             await (new ScannedBuildTree(simulatedRoot)).build(ctx);
