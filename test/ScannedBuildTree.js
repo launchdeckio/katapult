@@ -70,7 +70,13 @@ describe('ScannedBuildTree', () => {
         it('should run the commands in the right order', async () => {
             const ctx = new Context();
             await (new ScannedBuildTree(simulatedRoot)).install(ctx);
-            history.should.eql(['echo "install root"']);
+            await (new ScannedBuildTree(simulatedRoot)).build(ctx);
+            history.should.eql([
+                'echo "install root"',
+                'echo "install public"',
+                'echo "build public"',
+                'echo "build root"',
+            ]);
         });
     });
 });

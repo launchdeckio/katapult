@@ -1,0 +1,5 @@
+install:
+  - echo "install public"
+
+build:
+  - echo "build public"
