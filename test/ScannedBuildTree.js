@@ -9,6 +9,7 @@ const MockFs      = require('q-io/fs-mock');
 const classicMock = require('mock-fs');
 
 const ScannedBuildTree = rewire('./../lib/ScannedBuildTree');
+const stubRunner       = require('./support/stubRunner');
 const Context          = require('../lib/common/Context');
 const Runner           = require('../lib/common/Runner');
 const constants        = require('./../constants.json');
@@ -55,26 +56,24 @@ describe('ScannedBuildTree', () => {
 
     describe('end-to-end', () => {
 
-        let history;
+        let revert;
 
         const simulatedRoot = __dirname + '/fixtures/simulated';
 
         beforeEach(() => {
-            history = [];
-            sinon.stub(Runner.prototype, 'run').callsFake(commands => {
-                for (let command of commands) history.push(command.directive.command);
-            });
+            revert = stubRunner(Runner);
         });
 
         afterEach(() => {
-            Runner.prototype.run.restore();
+            revert();
         });
 
         it('should run the commands in the right order', async () => {
-            const ctx = new Context();
-            await (new ScannedBuildTree(simulatedRoot)).install(ctx);
-            await (new ScannedBuildTree(simulatedRoot)).build(ctx);
-            history.should.eql([
+            const ctx  = new Context();
+            const tree = new ScannedBuildTree(simulatedRoot);
+            await tree.install(ctx);
+            await tree.build(ctx);
+            Runner.history.should.eql([
                 'echo "install root"',
                 'echo "install public"',
                 'echo "build public"',
