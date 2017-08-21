@@ -6,9 +6,8 @@ const WriteInfo        = require('./../../lib/actions/WriteInfo');
 const useMockWorkspace = require('./../support/useMockWorkspace');
 const constants        = require('./../../constants.json');
 
-const sprintf = require('sprintf-js').sprintf;
-const path    = require('path');
-const fs      = require('q-io/fs');
+const path = require('path');
+const fs   = require('q-io/fs');
 
 describe('write-info', () => {
 
@@ -16,7 +15,7 @@ describe('write-info', () => {
 
     beforeEach(() => getMockWorkspace().copy());
 
-    it(sprintf('should write some data to %s', constants.buildInfoFile), () => {
+    it(`should write some data to ${constants.buildInfoFile}`, () => {
 
         process.chdir(getMockWorkspace().getTmp());
 

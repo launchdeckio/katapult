@@ -29,7 +29,7 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "bluebird": "^3.5.0",
-    "chalk": "^2.0.1",
+    "chalk": "^2.1.0",
     "defa": "1.0.0",
     "del": "^3.0.0",
     "dirsum": "^0.1.1",
@@ -39,13 +39,14 @@
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
     "johnnycache": "^2.4.1",
-    "js-yaml": "^3.9.0",
+    "js-yaml": "^3.9.1",
     "lodash": "^4.17.4",
     "make-globs-absolute": "^1.0.0",
     "minimatch": "^3.0.4",
     "mkdirp": "^0.5.1",
     "mock-fs": "^4.4.1",
     "numeral": "^2.0.6",
+    "path-exists": "^3.0.0",
     "pify": "^3.0.0",
     "q-io": "^1.13.4",
     "randomstring": "^1.1.5",
@@ -58,18 +59,18 @@
     "worq": "^2.1.2"
   },
   "devDependencies": {
-    "chai": "^4.1.0",
+    "chai": "^4.1.1",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^2.13.1",
-    "eslint": "^4.3.0",
-    "execa": "^0.7.0",
+    "eslint": "^4.5.0",
+    "execa": "^0.8.0",
     "istanbul": "^0.4.5",
     "jshint": "^2.9.5",
-    "mocha": "^3.4.2",
+    "mocha": "^3.5.0",
     "opn-cli": "^3.1.0",
     "rewire": "^2.5.2",
-    "sinon": "^2.3.8",
-    "sinon-chai": "^2.12.0"
+    "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0"
   },
   "preferGlobal": true
 }
