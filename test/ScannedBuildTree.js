@@ -2,11 +2,15 @@
 
 require('./support/support');
 
-const rewire           = require('rewire');
-const path             = require('path');
+const sinon       = require('sinon');
+const rewire      = require('rewire');
+const path        = require('path');
+const MockFs      = require('q-io/fs-mock');
+const classicMock = require('mock-fs');
+
 const ScannedBuildTree = rewire('./../lib/ScannedBuildTree');
-const MockFs           = require('q-io/fs-mock');
-const classicMock      = require('mock-fs');
+const Context          = require('../lib/common/Context');
+const Runner           = require('../lib/common/Runner');
 const constants        = require('./../constants.json');
 
 const configFile = constants.configFile;
@@ -46,8 +50,27 @@ describe('ScannedBuildTree', () => {
         });
     });
 
-    describe('scanTree()', () => {
+    describe('end-to-end', () => {
 
-        // it('should ')
+        let history;
+
+        const simulatedRoot = __dirname + '/fixtures/simulated';
+
+        beforeEach(() => {
+            history = [];
+            sinon.stub(Runner.prototype, 'run').callsFake(commands => {
+                for (let command of commands) history.push(command.directive.command);
+            });
+        });
+
+        afterEach(() => {
+            Runner.prototype.run.restore();
+        });
+
+        it('should run the commands in the right order', async () => {
+            const ctx = new Context();
+            await (new ScannedBuildTree(simulatedRoot)).install(ctx);
+            history.should.eql(['echo "install root"']);
+        });
     });
 });
