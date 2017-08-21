@@ -16,6 +16,8 @@ const constants        = require('./../constants.json');
 const configFile = constants.configFile;
 const ignoreFile = constants.ignoreFile;
 
+let defaultfs = require('q-io/fs');
+
 const setupMockFs = function (mockFs) {
     ScannedBuildTree.__set__('fs', MockFs(mockFs));
     classicMock(mockFs);
@@ -23,6 +25,7 @@ const setupMockFs = function (mockFs) {
 
 const teardownMockFs = function () {
     classicMock.restore();
+    ScannedBuildTree.__set__('fs', defaultfs);
 };
 
 const expected = [
@@ -68,6 +71,7 @@ describe('ScannedBuildTree', () => {
         });
 
         it('should run the commands in the right order', async () => {
+            // process.chdir(simulatedRoot);
             const ctx = new Context();
             await (new ScannedBuildTree(simulatedRoot)).install(ctx);
             await (new ScannedBuildTree(simulatedRoot)).build(ctx);
