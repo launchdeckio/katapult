@@ -1,11 +1,11 @@
 'use strict';
 
-var constants = require('./../../../constants.json');
+const constants = require('./../../../constants.json');
 
-var configFile = constants.configFile,
+const configFile = constants.configFile,
     ignoreFile = constants.ignoreFile;
 
-var mockFs = {
+const mockFs = {
     'tmp': {
         'a':      {
             'b': {
