@@ -1877,6 +1877,12 @@ lru-cache@^4.0.0, lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
+make-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.0.0.tgz#97a011751e91dd87cfadef58832ebb04936de978"
+  dependencies:
+    pify "^2.3.0"
+
 make-globs-absolute@1.0.0, make-globs-absolute@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/make-globs-absolute/-/make-globs-absolute-1.0.0.tgz#be2050b5a3d1eb6495ecce3f4fa4595c08424860"
