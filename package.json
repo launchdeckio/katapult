@@ -10,7 +10,7 @@
     "node": ">=7.6"
   },
   "scripts": {
-    "pretest": "jshint lib",
+    "pretest": "eslint lib",
     "depcheck": "depcheck --ignore-bin-package=false",
     "test": "mocha --recursive -R spec",
     "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive && opn coverage/lcov-report/index.html"
@@ -63,10 +63,9 @@
     "chai": "^4.1.1",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^2.13.1",
-    "eslint": "^4.5.0",
+    "eslint": "^4.7.2",
     "execa": "^0.8.0",
     "istanbul": "^0.4.5",
-    "jshint": "^2.9.5",
     "mocha": "^3.5.0",
     "opn-cli": "^3.1.0",
     "rewire": "^2.5.2",

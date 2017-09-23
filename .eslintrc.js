@@ -1,4 +1,7 @@
 module.exports = {
+    "parserOptions": {
+        "ecmaVersion": 8,
+    },
     "env": {
         "es6": true,
         "node": true
@@ -20,9 +23,6 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ],
-        "no-var": [
-            "error"
         ]
     }
 };
