@@ -29,17 +29,29 @@ describe('parseDirective', () => {
         });
     });
 
+    it('should read the path property', () => {
+
+        const directive = parseDirective({
+            'cmd':  'npm run build',
+            'path': 'web',
+        });
+
+        directive.subPath.should.eql('web');
+    });
+
     it('should parse cacheable directives into an instance of CacheableDirective', () => {
 
         const directive = parseDirective({
             'cmd':    'npm i',
+            'path':   'plugin',
             'input':  'package.json',
             'output': 'node_modules',
-            'ttl':    '1 day'
+            'ttl':    '1 day',
         });
 
         directive.should.be.an.instanceof(CacheableDirective);
         directive.command.should.eql('npm i');
+        directive.subPath.should.eql('plugin');
         directive.cacheOptions.should.be.an('object');
         directive.cacheOptions.input.should.deep.eql(['package.json']);
         directive.cacheOptions.output.should.deep.eql(['node_modules']);

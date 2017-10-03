@@ -39,7 +39,7 @@
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
     "johnnycache": "^2.4.1",
-    "js-yaml": "^3.9.1",
+    "js-yaml": "^3.10.0",
     "lodash": "^4.17.4",
     "make-dir": "^1.0.0",
     "make-globs-absolute": "^1.0.0",
@@ -60,17 +60,17 @@
     "worq": "^2.1.2"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
+    "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "coveralls": "^2.13.1",
-    "eslint": "^4.7.2",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
     "execa": "^0.8.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.0",
     "opn-cli": "^3.1.0",
     "rewire": "^2.5.2",
-    "sinon": "^3.2.1",
-    "sinon-chai": "^2.13.0"
+    "sinon": "^4.0.0",
+    "sinon-chai": "^2.14.0"
   },
   "preferGlobal": true
 }
