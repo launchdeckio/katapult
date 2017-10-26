@@ -12,9 +12,11 @@ describe('LocalAgent', () => {
 
         const files = await agent.dir(__dirname + '/../fixtures/simulated');
 
-        files.should.eql([
-            {name: '.katapult.yml', isDirectory: false},
-            {name: 'public', isDirectory: true}
-        ]);
+        files.should.have.length(2);
+
+        files[0].name.should.equal('.katapult.yml');
+        files[1].name.should.equal('public');
+        files[0].should.have.property('stat');
+        files[1].should.have.property('stat');
     });
 });
