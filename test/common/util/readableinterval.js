@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../../support/support');
+require('../../support');
 
 const readableInterval = require('./../../../lib/common/util/readableInterval');
 

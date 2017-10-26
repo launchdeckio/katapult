@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../support/support');
+require('../support');
 
 const WriteInfo        = require('./../../lib/actions/WriteInfo');
 const useMockWorkspace = require('./../support/useMockWorkspace');
