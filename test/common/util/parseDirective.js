@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../../support/support');
+require('../../support');
 
 const parseDirective = require('./../../../lib/common/util/parseDirective');
 

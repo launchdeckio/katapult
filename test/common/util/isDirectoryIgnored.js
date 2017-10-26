@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../../support/support');
+require('../../support');
 
 const isDirectoryIgnored = require('./../../../lib/common/util/isDirectoryIgnored');
 

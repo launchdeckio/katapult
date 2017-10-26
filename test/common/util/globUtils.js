@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../../support/support');
+require('../../support');
 
 var globUtils = require('./../../../lib/common/util/globUtils');
 

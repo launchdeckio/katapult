@@ -1,6 +1,6 @@
 'use strict';
 
-require('./support/support');
+require('./support');
 
 const Runner     = require('../lib/common/Runner');
 const stubRunner = require('./support/stubRunner');

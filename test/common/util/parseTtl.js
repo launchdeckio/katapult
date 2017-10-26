@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../../support/support');
+require('../../support');
 
 const parseTtl = require('./../../../lib/common/util/parseTtl');
 const expect   = require('chai').expect;

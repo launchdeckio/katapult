@@ -1,6 +1,6 @@
 'use strict';
 
-require('./../support/support');
+require('../support');
 
 const ProcessFailedError = require('./../../lib/error/ProcessFailedError');
 const GracefulError      = require('shipment').GracefulError;

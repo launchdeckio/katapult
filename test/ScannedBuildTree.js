@@ -1,6 +1,6 @@
 'use strict';
 
-require('./support/support');
+require('./support');
 
 const sinon       = require('sinon');
 const rewire      = require('rewire');
