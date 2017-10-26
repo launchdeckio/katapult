@@ -49,7 +49,6 @@
     "numeral": "^2.0.6",
     "path-exists": "^3.0.0",
     "pify": "^3.0.0",
-    "q-io": "^1.13.4",
     "randomstring": "^1.1.5",
     "shipment": "^10.0.0",
     "shipment-monitor-process": "^2.2.2",
@@ -68,7 +67,6 @@
     "istanbul": "^0.4.5",
     "mocha": "^4.0.0",
     "opn-cli": "^3.1.0",
-    "rewire": "^2.5.2",
     "sinon": "^4.0.0",
     "sinon-chai": "^2.14.0"
   },
