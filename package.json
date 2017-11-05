@@ -50,7 +50,7 @@
     "path-exists": "^3.0.0",
     "pify": "^3.0.0",
     "randomstring": "^1.1.5",
-    "shipment": "^11.0.0-3",
+    "shipment": "^11.0.0-4",
     "shipment-monitor-process": "^2.2.2",
     "slug": "^0.9.1",
     "sprintf-js": "^1.1.1",
