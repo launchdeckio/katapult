@@ -49,7 +49,7 @@
     "path-exists": "^3.0.0",
     "pify": "^3.0.0",
     "randomstring": "^1.1.5",
-    "shipment": "^11.0.0-5",
+    "shipment": "^11.0.0-6",
     "shipment-monitor-process": "^2.3.0",
     "sprintf-js": "^1.1.1",
     "stream-buffers": "^3.0.1",
