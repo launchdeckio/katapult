@@ -28,6 +28,7 @@
   "author": "JM Versteeg",
   "license": "AGPL-3.0",
   "dependencies": {
+    "arrify": "^1.0.1",
     "bluebird": "^3.5.0",
     "chalk": "^2.1.0",
     "defa": "1.0.0",
