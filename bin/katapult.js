@@ -3,12 +3,17 @@
 
 const {cli} = require('shipment');
 
+const {cliFormatter: smpFormatter} = require('shipment-monitor-process');
+
 const actions   = require('./../lib/actions');
 const formatter = require('./../lib/cliFormatter');
 
 cli(actions, {
 
-    formatters: [formatter],
+    formatters: [
+        formatter,
+        smpFormatter,
+    ],
 
     actions: {
         package:    '"runInstall", "runBuild" and "purge" serially',
@@ -23,25 +28,21 @@ cli(actions, {
         b: {
             alias:       'buildpath',
             description: 'Build "root" directory',
-            default:     '.',
             type:        'string',
         },
         w: {
             alias:       'workspace',
             description: 'Metadata storage path',
-            default:     './.katapult',
             type:        'string',
         },
         m: {
             alias:       'maxCacheSize',
             description: 'Max allowed cache size',
-            default:     '512mb',
             type:        'string',
         },
         d: {
             alias:       'disableCache',
             description: 'Disable caching',
-            default:     false,
             type:        'boolean',
         }
     }
