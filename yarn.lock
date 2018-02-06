@@ -3842,6 +3842,18 @@ shipment@^12.0.0-1:
     through2 "^2.0.3"
     yargs "^11.0.0"
 
+"shipment@https://github.com/launchdeckio/shipment#reship":
+  version "12.0.0-2"
+  resolved "https://github.com/launchdeckio/shipment#bf7678ee644dffc194c56fb7c0da5f130302bfbc"
+  dependencies:
+    body-parser "^1.18.2"
+    express "^4.16.2"
+    lodash "^4.17.5"
+    morgan "^1.9.0"
+    stream-line-wrapper "^0.1.1"
+    through2 "^2.0.3"
+    yargs "^11.0.0"
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
