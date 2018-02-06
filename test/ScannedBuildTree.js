@@ -7,7 +7,7 @@ const classicMock = require('mock-fs');
 
 const ScannedBuildTree = require('./../lib/ScannedBuildTree');
 const stubRunner       = require('./support/stubRunner');
-const Context          = require('../lib/common/Context');
+const Context          = require('../lib/common/Workspace');
 const Runner           = require('../lib/common/Runner');
 const constants        = require('./../constants.json');
 

@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-const Shipment = require('shipment');
-const pkg      = require('./../package.json');
-const actions  = require('./../lib/actions');
+const {cli} = require('shipment');
 
-(new Shipment(actions, {pkg})).cli();
+const actions   = require('./../lib/actions');
+const formatter = require('./../lib/cliFormatter');
+
+cli(actions, {formatters: [formatter]}).exec();
