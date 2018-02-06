@@ -7,12 +7,12 @@
     "katapult": "bin/katapult.js"
   },
   "engines": {
-    "node": ">=7.6"
+    "node": ">=8"
   },
   "scripts": {
     "pretest": "eslint lib",
     "depcheck": "depcheck --ignore-bin-package=false",
-    "test": "mocha --recursive -R spec",
+    "test": "ava",
     "test-coverage": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive && opn coverage/lcov-report/index.html"
   },
   "repository": {
@@ -53,6 +53,7 @@
     "user-home": "^2.0.0"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.0",
