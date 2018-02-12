@@ -3830,26 +3830,15 @@ shipment-monitor-process@^3.0.0-0:
     chalk "^2.3.0"
     split "^1.0.1"
 
-shipment@^12.0.0-1:
-  version "12.0.0-1"
-  resolved "https://registry.yarnpkg.com/shipment/-/shipment-12.0.0-1.tgz#ebe6077d0a92dc83d954a37098b8fd0734fa3f1c"
-  dependencies:
-    body-parser "^1.18.2"
-    express "^4.16.2"
-    lodash "^4.17.5"
-    morgan "^1.9.0"
-    stream-line-wrapper "^0.1.1"
-    through2 "^2.0.3"
-    yargs "^11.0.0"
-
 "shipment@https://github.com/launchdeckio/shipment#reship":
   version "12.0.0-2"
-  resolved "https://github.com/launchdeckio/shipment#bf7678ee644dffc194c56fb7c0da5f130302bfbc"
+  resolved "https://github.com/launchdeckio/shipment#3f0df949123418b9659f83547adef9ca7a8119dd"
   dependencies:
     body-parser "^1.18.2"
     express "^4.16.2"
     lodash "^4.17.5"
     morgan "^1.9.0"
+    serialize-error "^2.1.0"
     stream-line-wrapper "^0.1.1"
     through2 "^2.0.3"
     yargs "^11.0.0"
