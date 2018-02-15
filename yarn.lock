@@ -2422,9 +2422,9 @@ istanbul@^0.4.5:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-johnnycache@^3.0.0-6:
-  version "3.0.0-6"
-  resolved "https://registry.yarnpkg.com/johnnycache/-/johnnycache-3.0.0-6.tgz#4fe3c1a62d5b9f47a1732486b23f2d3a0b240034"
+"johnnycache@https://github.com/sgtlambda/johnnycache":
+  version "3.0.0-8"
+  resolved "https://github.com/sgtlambda/johnnycache#3297153d7f6efaf0f8a0f3020dcfb6f82e4e0d22"
   dependencies:
     arrify "^1.0.1"
     bluebird "^3.5.1"

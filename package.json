@@ -36,7 +36,7 @@
     "filesize": "^3.6.0",
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
-    "johnnycache": "^3.0.0-6",
+    "johnnycache": "https://github.com/sgtlambda/johnnycache",
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.5",
     "make-dir": "^1.0.0",
