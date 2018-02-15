@@ -30,13 +30,13 @@
   "dependencies": {
     "arrify": "^1.0.1",
     "bluebird": "^3.5.0",
-    "chalk": "^2.1.0",
+    "chalk": "^2.3.1",
     "del": "^3.0.0",
     "dirsum": "^0.1.1",
     "filesize": "^3.6.0",
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
-    "johnnycache": "^2.4.1",
+    "johnnycache": "^3.0.0-6",
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.5",
     "make-dir": "^1.0.0",
@@ -60,9 +60,9 @@
     "eslint": "^4.17.0",
     "execa": "^0.9.0",
     "istanbul": "^0.4.5",
-    "mocha": "^5.0.0",
+    "mocha": "^5.0.1",
     "opn-cli": "^3.1.0",
-    "sinon": "^4.2.2",
+    "sinon": "^4.3.0",
     "sinon-chai": "^2.14.0"
   },
   "preferGlobal": true
