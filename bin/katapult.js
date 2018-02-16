@@ -5,8 +5,12 @@ const {cli} = require('shipment');
 
 const {cliFormatter: smpFormatter} = require('shipment-monitor-process');
 
-const actions   = require('./../lib/actions');
 const formatter = require('./../lib/cliFormatter');
+
+const actions = {
+    ...require('./../lib/actions'),
+    package: require('./../lib/actions/package'),
+};
 
 cli(actions, {
 
