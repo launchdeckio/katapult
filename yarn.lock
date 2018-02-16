@@ -2424,7 +2424,7 @@ istanbul@^0.4.5:
 
 "johnnycache@https://github.com/sgtlambda/johnnycache":
   version "3.0.0-8"
-  resolved "https://github.com/sgtlambda/johnnycache#3297153d7f6efaf0f8a0f3020dcfb6f82e4e0d22"
+  resolved "https://github.com/sgtlambda/johnnycache#4f8f08ac097f7e7c25529b65fe3f76ce5fcdf2b7"
   dependencies:
     arrify "^1.0.1"
     bluebird "^3.5.1"
