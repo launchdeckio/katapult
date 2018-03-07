@@ -3797,9 +3797,9 @@ shipment-monitor-process@^3.0.0-0:
     chalk "^2.3.0"
     split "^1.0.1"
 
-"shipment@https://github.com/launchdeckio/shipment#reship":
+"shipment@https://github.com/launchdeckio/shipment":
   version "12.0.0-2"
-  resolved "https://github.com/launchdeckio/shipment#424bae5e76adcc101b7322646a046898569e79a0"
+  resolved "https://github.com/launchdeckio/shipment#95ae3facb0da9811809e45486ffabd9a1a90e767"
   dependencies:
     body-parser "^1.18.2"
     express "^4.16.2"

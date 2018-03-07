@@ -5,11 +5,8 @@ notifications:
 node_js:
   - stable
 before_script:
-  - npm install -g istanbul
   - npm run-script pretest
   - npm link
 script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive
+  - npm run test
   - git clone -b ci https://github.com/sgtlambda/katapult-test.git tmp && cd tmp && katapult package
-after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
