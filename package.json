@@ -12,7 +12,7 @@
   "scripts": {
     "pretest": "eslint lib",
     "depcheck": "depcheck --ignore-bin-package=false",
-    "test": "echo \"TODO: implement tests\" || ava",
+    "test": "echo \"TODO: implement tests\" || ava"
   },
   "repository": {
     "type": "git",
