@@ -4,7 +4,7 @@ require('./support');
 
 const Runner     = require('../lib/common/Runner');
 const stubRunner = require('./support/stubRunner');
-const Context    = require('./../lib/common/Context');
+const Context    = require('../lib/common/Workspace');
 
 const PreconfiguredBuildTree = require('../lib/PreconfiguredBuildTree');
 

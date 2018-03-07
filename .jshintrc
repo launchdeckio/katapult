@@ -1,9 +1,0 @@
-{
-  "node":    true,
-  "strict":  true,
-  "esnext":  true,
-  "mocha":   true,
-  "globals": {
-    "Promise": true
-  }
-}
