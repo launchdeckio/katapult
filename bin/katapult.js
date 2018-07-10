@@ -30,7 +30,7 @@ cli(actions, {
 
     options: {
         b: {
-            alias:       'buildpath',
+            alias:       'buildPath',
             description: 'Build "root" directory',
             type:        'string',
         },
