@@ -24,7 +24,6 @@ cli(actions, {
         runInstall: 'Run the install commands',
         runBuild:   'Run the build commands',
         purge:      'Delete all files matching "purge" globs',
-        readSum:    'Output hash tree for the build',
         clearCache: 'Empty cached results from install/build',
     },
 
