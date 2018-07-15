@@ -1,5 +1,0 @@
-install:
-  - echo "install root"
-
-build:
-  - echo "build root"
