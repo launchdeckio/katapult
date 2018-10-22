@@ -3,8 +3,6 @@
 > Build automation tool by launchdeck.io
 
 [![Build Status][travis-image]][travis-url]
-[![Code Quality][codeclimate-image]][codeclimate-url]
-[![Code Coverage][coveralls-image]][coveralls-url]
 [![NPM Version][npm-image]][npm-url]
 
 ### Install
@@ -105,17 +103,11 @@ GNU AGPL v3 © [sgtlambda](http://github.com/sgtlambda)
 [travis-image]: https://img.shields.io/travis/launchdeckio/katapult.svg?style=flat-square
 [travis-url]: https://travis-ci.org/launchdeckio/katapult
 
-[codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/katapult.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/launchdeckio/katapult
-
 [david-image]: https://img.shields.io/david/launchdeckio/katapult.svg?style=flat-square
 [david-url]: https://david-dm.org/launchdeckio/katapult
 
 [david-dev-image]: https://img.shields.io/david/dev/launchdeckio/katapult.svg?style=flat-square
 [david-dev-url]: https://david-dm.org/launchdeckio/katapult#info=devDependencies
-
-[coveralls-image]: https://img.shields.io/coveralls/launchdeckio/katapult.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/launchdeckio/katapult
 
 [npm-image]: https://img.shields.io/npm/v/katapult.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/katapult
