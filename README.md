@@ -59,13 +59,13 @@ Commands can be specified using two different types of syntax: plain and simple
 ```yaml
   - npm install
 ```
-or using a more verbose (associative) syntax. The latter allows you to define additional options on a per-command basis, for example: command caching. Command caching tremendously increases build speeds.
+or using a more verbose (associative) syntax. The latter allows you to define additional options on a per-command basis, for example: command caching. Command caching can significantly increase build speeds.
 ```yaml
   - cmd: npm install
     input: package.json
     output: node_modules
 ```
-Katapult will use [johnnycache](https://github.com/launchdeckio/katapult) and store the resulting files of the operation (in this case the entire contents of `node_modules` after running `npm install`) to a `.tar.gz` archive in `.katapult/cache`.
+Katapult will use [johnnycache](https://github.com/sgtlambda/johnnycache) and store the resulting files of the operation (in this case, the entire contents of `node_modules` after running `npm install`) to a `.tar.gz` archive in `.katapult/cache`.
 
 #### `purge`
 
