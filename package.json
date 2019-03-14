@@ -46,7 +46,6 @@
     "pify": "^4.0.0",
     "shipment": "https://github.com/launchdeckio/shipment",
     "shipment-monitor-process": "^3.0.0-0",
-    "sprintf-js": "^1.1.1",
     "stream-buffers": "^3.0.2",
     "user-home": "^2.0.0"
   },
