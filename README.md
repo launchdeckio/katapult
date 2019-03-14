@@ -16,22 +16,23 @@ $ npm install -g katapult
 ```bash
 $ katapult --help
 
-katapult <cmd> [args]
+katapult <command> [args]
 
 Commands:
-  package      Package the build at the current working directory. (Invokes
-               run-install, run-build, write-info, purge, and write-sum)
-  run-install  Recursively runs the "install" directives starting at the current
-               working directory.
-  run-build    Recursively runs the "build" directives starting at the current
-               working directory.
-  purge        Wipes files not needed in the build based on the the "purge"
-               globs.
-  clear-cache  Clears the build cache in the configured workspace.
+  katapult.js runInstall  Run the install commands
+  katapult.js runBuild    Run the build commands
+  katapult.js purge       Delete all files matching "purge" globs
+  katapult.js clearCache  Empty cached results from install/build
+  katapult.js package     "runInstall", "runBuild" and "purge" serially
 
 Options:
-  -h, --help  Show help                                                [boolean]
-  --version   Show version number                                      [boolean]
+  --version           Show version number                              [boolean]
+  -b, --buildPath     Build "root" directory                            [string]
+  -w, --workspace     Metadata storage path                             [string]
+  -m, --maxCacheSize  Max allowed cache size                            [string]
+  -d, --disableCache  Disable caching                                  [boolean]
+  -v, --verbose       Extra chatty mode                                  [count]
+  -h, --help          Show help                                        [boolean]
 ```
 
 ### .katapult.yml
