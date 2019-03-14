@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:launchdeckio/katapult.git"
+    "url": "git@github.com:launchdeckio/katapult.git"
   },
   "keywords": [
     "build",
