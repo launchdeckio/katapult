@@ -1,4 +1,5 @@
 module.exports = {
+    "plugins": ["jest"],
     "parserOptions": {
         "ecmaVersion":  8,
         "ecmaFeatures": {
@@ -7,7 +8,8 @@ module.exports = {
     },
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "jest/globals": true
     },
     "extends": "eslint:recommended",
     "rules": {
@@ -26,6 +28,11 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error"
     }
 };
