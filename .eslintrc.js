@@ -1,10 +1,7 @@
 module.exports = {
     "plugins": ["jest"],
     "parserOptions": {
-        "ecmaVersion":  8,
-        "ecmaFeatures": {
-            experimentalObjectRestSpread: true,
-        }
+        "ecmaVersion":  9,
     },
     "env": {
         "es6": true,
