@@ -28,19 +28,19 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "arrify": "^2.0.1",
-    "bluebird": "^3.5.4",
+    "bluebird": "^3.5.5",
     "chalk": "^2.4.2",
-    "del": "^4.1.0",
+    "del": "^5.1.0",
     "filesize": "^4.1.2",
     "human-interval": "^0.1.6",
     "is-glob-blacklist": "0.0.1",
     "johnnycache": "https://github.com/sgtlambda/johnnycache",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "make-dir": "^3.0.0",
     "make-globs-absolute": "^1.0.0",
     "minimatch": "^3.0.4",
-    "mock-fs": "^4.8.0",
+    "mock-fs": "^4.10.1",
     "numeral": "^2.0.6",
     "path-exists": "^4.0.0",
     "pify": "^4.0.1",
@@ -50,10 +50,10 @@
     "user-home": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-jest": "^22.4.1",
-    "execa": "^1.0.0",
-    "jest": "^24.7.1"
+    "eslint": "^6.3.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "execa": "^2.0.4",
+    "jest": "^24.9.0"
   },
   "preferGlobal": true
 }
